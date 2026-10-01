@@ -1,3 +1,36 @@
 [gd_scene format=3 uid="uid://dwd2vgbfohes8"]
 
+[ext_resource type="Texture2D" uid="uid://dlq0mlayvpbnw" path="res://assets/personaje_1.png" id="1_v023a"]
+[ext_resource type="Texture2D" uid="uid://br1qxbegqxdb4" path="res://assets/personaje_2.png" id="2_5nfxw"]
+[ext_resource type="Script" uid="uid://crkjwwkobmf1x" path="res://scripts/personaje.gd" id="3_mcw2a"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_57uln"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_v023a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5nfxw")
+}],
+"loop": 1,
+"name": &"andar",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_v023a")
+}],
+"loop": 1,
+"name": &"quieto",
+"speed": 5.0
+}]
+
 [node name="Mundo" type="Node2D" unique_id=2141636912]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=30224683]
+position = Vector2(160, 90)
+sprite_frames = SubResource("SpriteFrames_57uln")
+animation = &"andar"
+autoplay = "quieto"
+script = ExtResource("3_mcw2a")
