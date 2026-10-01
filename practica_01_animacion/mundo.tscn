@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://w0pm25bditax"]
+
+[ext_resource type="Texture2D" uid="uid://cn4x8ld1sk4cl" path="res://assets/murcielago_1.png" id="1_fw4w5"]
+[ext_resource type="Texture2D" uid="uid://c8hq2berpwcu7" path="res://assets/murcielago_2.png" id="2_otwa2"]
+[ext_resource type="Texture2D" uid="uid://bi0aisgawx7h2" path="res://assets/murcielago_3.png" id="3_aou4a"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jwvrw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fw4w5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_otwa2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_aou4a")
+}],
+"loop": 1,
+"name": &"volar",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fw4w5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_aou4a")
+}],
+"loop": 1,
+"name": &"volar con prisa",
+"speed": 18.0
+}]
+
+[node name="Mundo" type="Node2D" unique_id=938767496]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1207329709]
+position = Vector2(160, 90)
+sprite_frames = SubResource("SpriteFrames_jwvrw")
+animation = &"volar"
+autoplay = "volar"
+speed_scale = -10.0

@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://6i3t82ssn7hh"]
+
+[ext_resource type="Texture2D" uid="uid://ctctg87seahu6" path="res://assets/hoja_murcielago.png" id="1_6ba58"]
+[ext_resource type="Texture2D" uid="uid://cq5pxrxie4a5" path="res://assets/hoja_personajes.png" id="2_lgngo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aou4a"]
+atlas = ExtResource("1_6ba58")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgngo"]
+atlas = ExtResource("1_6ba58")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fw4w5"]
+atlas = ExtResource("1_6ba58")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otwa2"]
+atlas = ExtResource("1_6ba58")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o5m4q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aou4a")
+}],
+"loop": 1,
+"name": &"quieto",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgngo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fw4w5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otwa2")
+}],
+"loop": 1,
+"name": &"volar",
+"speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ckkb"]
+atlas = ExtResource("2_lgngo")
+region = Rect2(150, 50, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hh7m"]
+atlas = ExtResource("2_lgngo")
+region = Rect2(175, 50, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8jxu"]
+atlas = ExtResource("2_lgngo")
+region = Rect2(200, 50, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_57uln"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ckkb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hh7m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8jxu")
+}],
+"loop": 1,
+"name": &"volar_2",
+"speed": 5.0
+}]
+
+[node name="Mundo" type="Node2D" unique_id=1139114466]
+
+[node name="Murcielago" type="AnimatedSprite2D" parent="." unique_id=553185495]
+position = Vector2(160, 90)
+sprite_frames = SubResource("SpriteFrames_o5m4q")
+animation = &"quieto"
+autoplay = "volar"
+
+[node name="Personaje" type="AnimatedSprite2D" parent="." unique_id=531942563]
+position = Vector2(130, 90)
+sprite_frames = SubResource("SpriteFrames_57uln")
+animation = &"volar_2"
+autoplay = "volar_2"
