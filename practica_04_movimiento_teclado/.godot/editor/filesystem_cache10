@@ -1,8 +1,11 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1790842348
-::res://assets/::1790838717
+::res://::1790940840
+::res://assets/::1790842349
 CREDITOS.md::TextFile::-1::1790838717::0::1::::<><><>0<>0<><>::
 personaje_1.png::CompressedTexture2D::7965909308384592156::1790838717::1790842349::1::::<><><>0<>0<>701d112782332bd1082a2a4f80cdfb57<>res://.godot/imported/personaje_1.png-0a29a2ef37c79b5cbea3f3aa46d50113.ctex::
 personaje_2.png::CompressedTexture2D::3634317451286751043::1790838717::1790842349::1::::<><><>0<>0<>1fd4774d814fad47cb8cfba393581f87<>res://.godot/imported/personaje_2.png-ac6b7cfb57c8dbb22de2048112823d93.ctex::
-::res://escenas/::1789147978
-::res://scripts/::1789147978
+::res://escenas/::1790844998
+personaje.tscn::PackedScene::8711286921785963789::1790844998::0::1::::<><><>0<>0<><>::uid://dlq0mlayvpbnw::::res://assets/personaje_1.png<>uid://br1qxbegqxdb4::::res://assets/personaje_2.png<>uid://crkjwwkobmf1x::::res://scripts/personaje.gd
+::res://scripts/::1790844662
+animated_sprite_2d.gd::GDScript::3118625077794058120::1790844662::0::1::::<>RefCounted<><>0<>0<><>::
+personaje.gd::GDScript::5987282398773814223::1790844622::0::1::::<>AnimatedSprite2D<><>0<>0<><>::
