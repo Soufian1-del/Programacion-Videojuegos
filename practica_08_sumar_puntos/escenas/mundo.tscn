@@ -1,17 +1,15 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://c07hv7cqu3upp"]
 
-[ext_resource type="Script" path="res://scripts/personaje.gd" id="1_v12yk"]
-[ext_resource type="Texture2D" path="res://assets/personaje_1.png" id="2_16hu1"]
-[ext_resource type="Script" path="res://scripts/moneda.gd" id="3_7oex1"]
-[ext_resource type="Texture2D" path="res://assets/moneda.png" id="4_4vydk"]
+[ext_resource type="Script" uid="uid://77mk555oy5tt" path="res://scripts/mundo.gd" id="1_16hu1"]
+[ext_resource type="Script" uid="uid://bb6kokwhrogl5" path="res://scripts/personaje.gd" id="1_v12yk"]
+[ext_resource type="Texture2D" uid="uid://dlq0mlayvpbnw" path="res://assets/personaje_1.png" id="2_16hu1"]
+[ext_resource type="PackedScene" uid="uid://cddh24xlrftio" path="res://moneda.tscn" id="4_16hu1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_40a7a"]
 size = Vector2(16, 20)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_txhqv"]
-radius = 8.0
-
 [node name="Mundo" type="Node2D" unique_id=1952267439]
+script = ExtResource("1_16hu1")
 
 [node name="Personaje" type="CharacterBody2D" parent="." unique_id=73838861]
 position = Vector2(160, 90)
@@ -23,14 +21,31 @@ texture = ExtResource("2_16hu1")
 [node name="FormaColision" type="CollisionShape2D" parent="Personaje" unique_id=1639277092]
 shape = SubResource("RectangleShape2D_40a7a")
 
-[node name="Moneda" type="Area2D" parent="." unique_id=1591319614]
+[node name="Moneda" parent="." unique_id=1037100074 instance=ExtResource("4_16hu1")]
 position = Vector2(230, 90)
-script = ExtResource("3_7oex1")
 
-[node name="Imagen" type="Sprite2D" parent="Moneda" unique_id=2002994334]
-texture = ExtResource("4_4vydk")
+[node name="Moneda2" parent="." unique_id=166274906 instance=ExtResource("4_16hu1")]
+position = Vector2(60, 50)
 
-[node name="FormaColision" type="CollisionShape2D" parent="Moneda" unique_id=1534379610]
-shape = SubResource("CircleShape2D_txhqv")
+[node name="Moneda3" parent="." unique_id=470757757 instance=ExtResource("4_16hu1")]
+position = Vector2(150, 140)
 
-[connection signal="body_entered" from="Moneda" to="Moneda" method="_on_body_entered"]
+[node name="Moneda4" parent="." unique_id=1903427686 instance=ExtResource("4_16hu1")]
+position = Vector2(100, 20)
+
+[node name="Moneda5" parent="." unique_id=217645700 instance=ExtResource("4_16hu1")]
+position = Vector2(190, 20)
+
+[node name="Interfaz" type="CanvasLayer" parent="." unique_id=1350933629]
+offset = Vector2(8, 4)
+transform = Transform2D(1, 0, 0, 1, 8, 4)
+
+[node name="Puntos" type="Label" parent="Interfaz" unique_id=1098719795]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "
+"
+
+[connection signal="recogida" from="Moneda" to="." method="_on_moneda_recogida"]
+[connection signal="recogida" from="Moneda2" to="." method="_on_moneda_recogida"]
+[connection signal="recogida" from="Moneda3" to="." method="_on_moneda_recogida"]

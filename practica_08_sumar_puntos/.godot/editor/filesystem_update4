@@ -1,0 +1,5 @@
+res://escenas/moneda.tscn
+res://escenas/mundo.tscn
+res://moneda.tscn
+res://scripts/moneda.gd
+res://scripts/mundo.gd

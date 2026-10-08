@@ -1,10 +1,15 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://dm5mrtl7modhc"]
 
-[ext_resource type="Script" path="res://scripts/personaje.gd" id="1_5nfxw"]
-[ext_resource type="Texture2D" path="res://assets/personaje_1.png" id="2_mcw2a"]
+[ext_resource type="Script" uid="uid://bb6kokwhrogl5" path="res://scripts/personaje.gd" id="1_5nfxw"]
+[ext_resource type="Texture2D" uid="uid://dlq0mlayvpbnw" path="res://assets/personaje_1.png" id="2_mcw2a"]
+[ext_resource type="Script" uid="uid://b8efs6gh3bvk0" path="res://scripts/moneda.gd" id="3_40a7a"]
+[ext_resource type="Texture2D" uid="uid://43kv1m5rokg7" path="res://assets/moneda.png" id="4_bg0f4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_40a7a"]
 size = Vector2(16, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dkg40"]
+radius = 8.0
 
 [node name="Mundo" type="Node2D" unique_id=1952267439]
 
@@ -17,3 +22,39 @@ texture = ExtResource("2_mcw2a")
 
 [node name="FormaColision" type="CollisionShape2D" parent="Personaje" unique_id=1639277092]
 shape = SubResource("RectangleShape2D_40a7a")
+
+[node name="Moneda" type="Area2D" parent="." unique_id=1856537222]
+position = Vector2(230, 90)
+script = ExtResource("3_40a7a")
+
+[node name="Imagen" type="Sprite2D" parent="Moneda" unique_id=611452009]
+texture = ExtResource("4_bg0f4")
+
+[node name="Formacolision" type="CollisionShape2D" parent="Moneda" unique_id=2119586391]
+shape = SubResource("CircleShape2D_dkg40")
+
+[node name="Moneda2" type="Area2D" parent="." unique_id=1031613241]
+position = Vector2(270, 40)
+script = ExtResource("3_40a7a")
+
+[node name="Imagen" type="Sprite2D" parent="Moneda2" unique_id=246927296]
+texture = ExtResource("4_bg0f4")
+
+[node name="Formacolision" type="CollisionShape2D" parent="Moneda2" unique_id=1395076511]
+shape = SubResource("CircleShape2D_dkg40")
+
+[node name="Moneda3" type="Area2D" parent="." unique_id=950959608]
+position = Vector2(120, 90)
+script = ExtResource("3_40a7a")
+
+[node name="Imagen" type="Sprite2D" parent="Moneda3" unique_id=1430488746]
+texture = ExtResource("4_bg0f4")
+
+[node name="Formacolision" type="CollisionShape2D" parent="Moneda3" unique_id=1863450998]
+shape = SubResource("CircleShape2D_dkg40")
+
+[connection signal="body_entered" from="Moneda" to="Moneda" method="_on_body_entered"]
+[connection signal="body_exited" from="Moneda" to="Moneda" method="_on_body_exited"]
+[connection signal="body_exited" from="Moneda" to="Moneda2" method="_on_moneda_body_exited"]
+[connection signal="body_entered" from="Moneda2" to="Moneda2" method="_on_body_entered"]
+[connection signal="body_entered" from="Moneda3" to="Moneda3" method="_on_body_entered"]
