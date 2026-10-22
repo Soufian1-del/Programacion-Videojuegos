@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://d0unvxkbl3qja"]
+
+[ext_resource type="Texture2D" uid="uid://bqqoriic6ytex" path="res://assets/free-swamp-game-tileset-pixel-art/1 Tiles/Tile_02.png" id="1_dtrtu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dkg40"]
+size = Vector2(1152, 32)
+
+[node name="Suelo" type="StaticBody2D" unique_id=646232569]
+
+[node name="Tierra" type="Sprite2D" parent="." unique_id=1006381292]
+texture_repeat = 2
+texture = ExtResource("1_dtrtu")
+region_enabled = true
+region_rect = Rect2(0, 0, 1152, 32)
+
+[node name="Colision" type="CollisionShape2D" parent="." unique_id=71029027]
+shape = SubResource("RectangleShape2D_dkg40")

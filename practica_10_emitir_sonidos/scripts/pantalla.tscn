@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bv6vesbnuyn4h"]
+
+[ext_resource type="Script" uid="uid://ckbvlekk4kgms" path="res://scripts/pantalla.gd" id="1_q6ioa"]
+[ext_resource type="AudioStream" uid="uid://01uu3rgxdlx6" path="res://assets/boton.ogg" id="2_do8nx"]
+[ext_resource type="AudioStream" uid="uid://bmbi5nkvs34nn" path="res://assets/ive-got-this-faaaaaaaaahhhhh.mp3" id="2_q6ioa"]
+
+[node name="Pantalla" type="Control" unique_id=1177847013]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q6ioa")
+
+[node name="Boton" type="Button" parent="." unique_id=1765315272]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 67.0
+offset_right = 185.0
+offset_bottom = 98.0
+text = "SUENA"
+
+[node name="Reproductor" type="AudioStreamPlayer2D" parent="Boton" unique_id=1765340358]
+stream = ExtResource("2_q6ioa")
+
+[node name="Boton2" type="Button" parent="." unique_id=1010554632]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 134.0
+offset_right = 309.0
+offset_bottom = 165.0
+text = "SUENA"
+
+[node name="Reproductor2" type="AudioStreamPlayer2D" parent="Boton2" unique_id=352326038]
+stream = ExtResource("2_do8nx")
+
+[connection signal="pressed" from="Boton" to="." method="_on_boton_pressed"]
+[connection signal="pressed" from="Boton2" to="." method="_on_boton_2_pressed"]

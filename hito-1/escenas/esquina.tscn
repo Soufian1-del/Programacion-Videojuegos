@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ton3ds1qkagy"]
+
+[ext_resource type="Texture2D" uid="uid://fnkcigc8i0kx" path="res://assets/free-swamp-game-tileset-pixel-art/1 Tiles/Tile_48.png" id="1_weceh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qpv3l"]
+size = Vector2(32, 32)
+
+[node name="Esquina" type="StaticBody2D" unique_id=871891656]
+rotation = 3.9269907
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=316730007]
+rotation = 3.9269907
+texture = ExtResource("1_weceh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2012920060]
+rotation = 3.9269907
+shape = SubResource("RectangleShape2D_qpv3l")

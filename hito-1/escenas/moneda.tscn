@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://dqvq5nxm2x8kw"]
+
+[ext_resource type="Script" uid="uid://dbfmjxmmax2b4" path="res://scripts/moneda.gd" id="1_ponsd"]
+[ext_resource type="Texture2D" uid="uid://dw0pjg87pcmli" path="res://assets/Rocky Roads/Rocky Roads/Objects/coin_small_silver.png" id="2_tr4to"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xulgr"]
+atlas = ExtResource("2_tr4to")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5bxjq"]
+atlas = ExtResource("2_tr4to")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpmgh"]
+atlas = ExtResource("2_tr4to")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6r2j4"]
+atlas = ExtResource("2_tr4to")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xq8jy"]
+atlas = ExtResource("2_tr4to")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6juyn"]
+atlas = ExtResource("2_tr4to")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dkg40"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xulgr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5bxjq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpmgh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6r2j4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xq8jy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6juyn")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dkg40"]
+
+[node name="Moneda" type="Area2D" unique_id=1632104830]
+script = ExtResource("1_ponsd")
+
+[node name="Animacion" type="AnimatedSprite2D" parent="." unique_id=460034660]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_dkg40")
+autoplay = "default"
+frame_progress = 0.63916326
+
+[node name="Colision" type="CollisionShape2D" parent="." unique_id=580756730]
+shape = SubResource("CircleShape2D_dkg40")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

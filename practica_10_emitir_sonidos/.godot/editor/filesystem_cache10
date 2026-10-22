@@ -1,0 +1,11 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1792679909
+::res://assets/::1792657485
+boton.ogg::AudioStreamOggVorbis::1809646465508749793::1789162364::1792656031::1::::<><><>0<>0<>804e629d898945289a6af21a4a51fd0b<>res://.godot/imported/boton.ogg-a9b9f1776abc7e373d81551eda663f6c.oggvorbisstr::
+CREDITOS.md::TextFile::-1::1789162364::0::1::::<><><>0<>0<><>::
+ive-got-this-faaaaaaaaahhhhh.mp3::AudioStreamMP3::3231291194093756507::1792657384::1792657485::1::::<><><>0<>0<>ef95cdb1087f8adf907e356d8c880037<>res://.godot/imported/ive-got-this-faaaaaaaaahhhhh.mp3-4f14d384019a85339ee634861d58639e.mp3str::
+::res://escenas/::1789162364
+::res://scripts/::1792658626
+boton.gd::GDScript::6674320848991179444::1792658323::0::1::::<>Button<><>0<>0<><>::
+pantalla.gd::GDScript::5478089108136588450::1792658482::0::1::::<>Control<><>0<>0<><>::
+pantalla.tscn::PackedScene::3925665258074803061::1792658626::0::1::::<><><>0<>0<><>::uid://ckbvlekk4kgms::::res://scripts/pantalla.gd<>uid://01uu3rgxdlx6::::res://assets/boton.ogg<>uid://bmbi5nkvs34nn::::res://assets/ive-got-this-faaaaaaaaahhhhh.mp3

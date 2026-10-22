@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://djycqolkada5x"]
+
+[ext_resource type="Script" uid="uid://lrkw40pmwlu8" path="res://scripts/juego.gd" id="1_47w8y"]
+[ext_resource type="Texture2D" uid="uid://c2s2edpywe5ew" path="res://assets/personaje_1.png" id="1_l3i6u"]
+[ext_resource type="Texture2D" uid="uid://c2unfrni7r6aw" path="res://assets/personaje_azul.png" id="2_47w8y"]
+
+[node name="Juego" type="Node2D" unique_id=1615177461]
+script = ExtResource("1_47w8y")
+
+[node name="Personaje" type="Sprite2D" parent="." unique_id=1637056972]
+position = Vector2(130, 90)
+texture = ExtResource("1_l3i6u")
+
+[node name="Compañero" type="Sprite2D" parent="." unique_id=2016288094]
+position = Vector2(190, 90)
+texture = ExtResource("2_47w8y")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1338506971]
+
+[node name="Menu" type="Button" parent="CanvasLayer" unique_id=2131750412]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Menu
+"
+
+[connection signal="pressed" from="CanvasLayer/Menu" to="." method="_on_menu_pressed"]

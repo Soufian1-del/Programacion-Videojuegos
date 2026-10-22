@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://sn4fmy85gqmq"]
+
+[ext_resource type="Script" uid="uid://o1mg8fc52xvb" path="res://scripts/menu.gd" id="1_vdanu"]
+[ext_resource type="AudioStream" uid="uid://r5p5p4w1awg3" path="res://assets/boton.ogg" id="2_d7r87"]
+
+[node name="Menu" type="Control" unique_id=815253396]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vdanu")
+
+[node name="Centro" type="CenterContainer" parent="." unique_id=736943170]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Caja" type="VBoxContainer" parent="Centro" unique_id=271830150]
+layout_mode = 2
+
+[node name="Titulo" type="Label" parent="Centro/Caja" unique_id=758927828]
+layout_mode = 2
+text = "EL RECOLECTOR"
+
+[node name="BotonJugar" type="Button" parent="Centro/Caja" unique_id=250313291]
+layout_mode = 2
+text = "Jugar"
+
+[node name="Sonido" type="AudioStreamPlayer2D" parent="Centro/Caja/BotonJugar" unique_id=1291298438]
+stream = ExtResource("2_d7r87")
+
+[node name="BotonSalir" type="Button" parent="Centro/Caja" unique_id=366248319]
+layout_mode = 2
+text = "salir
+"
+
+[connection signal="pressed" from="Centro/Caja/BotonJugar" to="." method="_on_boton_jugar_pressed"]
+[connection signal="pressed" from="Centro/Caja/BotonSalir" to="." method="_on_boton_salir_pressed"]

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://vrmyisiei2rk"]
+
+[ext_resource type="Texture2D" uid="uid://cmx4ullhyl4lv" path="res://assets/free-swamp-game-tileset-pixel-art/1 Tiles/Tile_12.png" id="1_sfj1e"]
+
+[node name="Tierra" type="StaticBody2D" unique_id=874419058]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1957389663]
+polygon = PackedVector2Array(-576, -149, 575, -150, 290, 149, -575, 149)
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1896400322]
+texture_repeat = 2
+texture = ExtResource("1_sfj1e")
+polygon = PackedVector2Array(-576, -149, 575, -150, 290, 149, -577, 149)
