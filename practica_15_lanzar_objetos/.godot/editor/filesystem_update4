@@ -1,0 +1,5 @@
+res://scripts/proyectil.gd
+res://proyectil.tscn
+res://escenas/personaje.tscn
+res://escenas/mundo.tscn
+res://scripts/personaje.gd
