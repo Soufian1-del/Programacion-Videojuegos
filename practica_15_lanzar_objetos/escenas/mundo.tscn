@@ -17,3 +17,9 @@ texture = ExtResource("2_glrvs")
 
 [node name="FormaColision" type="CollisionShape2D" parent="Personaje" unique_id=1639277092]
 shape = SubResource("RectangleShape2D_40a7a")
+
+[node name="Timer" type="Timer" parent="." unique_id=645129333]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="Personaje" method="_on_timer_timeout"]

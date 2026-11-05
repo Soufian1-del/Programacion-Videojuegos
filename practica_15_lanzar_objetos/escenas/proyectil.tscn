@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://4ntkrk8d3k1a"]
 
 [ext_resource type="Script" uid="uid://dg7n50d3k2oy2" path="res://scripts/proyectil.gd" id="1_etydj"]
-[ext_resource type="Texture2D" uid="uid://3c04b8c80ykw" path="res://assets/gema.png" id="2_oby6o"]
+[ext_resource type="Texture2D" uid="uid://b24mcgkla5epd" path="res://assets/nave.png" id="2_y2gxt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dkg40"]
 radius = 6.0
@@ -10,7 +10,7 @@ radius = 6.0
 script = ExtResource("1_etydj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=911706154]
-texture = ExtResource("2_oby6o")
+texture = ExtResource("2_y2gxt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=761170086]
 shape = SubResource("CircleShape2D_dkg40")

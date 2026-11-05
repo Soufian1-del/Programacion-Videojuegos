@@ -1,8 +1,8 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://dmexr0kvq4ero"]
 
-[ext_resource type="Script" path="res://scripts/mundo.gd" id="1_16hu1"]
-[ext_resource type="Script" path="res://scripts/personaje.gd" id="1_v12yk"]
-[ext_resource type="Texture2D" path="res://assets/personaje_1.png" id="2_16hu1"]
+[ext_resource type="Script" uid="uid://c6k1k8ss75slp" path="res://scripts/mundo.gd" id="1_16hu1"]
+[ext_resource type="Script" uid="uid://bb6kokwhrogl5" path="res://scripts/personaje.gd" id="1_v12yk"]
+[ext_resource type="Texture2D" uid="uid://dlq0mlayvpbnw" path="res://assets/personaje_1.png" id="2_16hu1"]
 [ext_resource type="PackedScene" path="res://escenas/moneda.tscn" id="4_7oex1"]
 [ext_resource type="PackedScene" path="res://escenas/caja.tscn" id="6_4vydk"]
 
@@ -22,6 +22,18 @@ texture = ExtResource("2_16hu1")
 [node name="FormaColision" type="CollisionShape2D" parent="Personaje" unique_id=1639277092]
 shape = SubResource("RectangleShape2D_40a7a")
 
+[node name="Camara" type="Camera2D" parent="Personaje" unique_id=1523131583]
+zoom = Vector2(0.5, 0.5)
+limit_left = 0
+limit_top = 0
+limit_right = 960
+limit_bottom = 540
+position_smoothing_enabled = true
+drag_vertical_enabled = true
+
+[node name="Timer" type="Timer" parent="Personaje" unique_id=704520437]
+wait_time = 0.1
+
 [node name="Interfaz" type="CanvasLayer" parent="." unique_id=749434465]
 
 [node name="Puntos" type="Label" parent="Interfaz" unique_id=1491781463]
@@ -31,123 +43,124 @@ offset_right = 8.0
 offset_bottom = 4.0
 text = "Puntos: 0"
 
-[node name="Caja1" type="StaticBody2D" parent="." unique_id=1687707163 instance=ExtResource("6_4vydk")]
+[node name="Caja1" parent="." unique_id=1687707163 instance=ExtResource("6_4vydk")]
 position = Vector2(120, 120)
 
-[node name="Caja2" type="StaticBody2D" parent="." unique_id=1884713371 instance=ExtResource("6_4vydk")]
+[node name="Caja2" parent="." unique_id=1884713371 instance=ExtResource("6_4vydk")]
 position = Vector2(138, 120)
 
-[node name="Caja3" type="StaticBody2D" parent="." unique_id=1950336890 instance=ExtResource("6_4vydk")]
+[node name="Caja3" parent="." unique_id=1950336890 instance=ExtResource("6_4vydk")]
 position = Vector2(156, 120)
 
-[node name="Caja4" type="StaticBody2D" parent="." unique_id=1496387301 instance=ExtResource("6_4vydk")]
+[node name="Caja4" parent="." unique_id=1496387301 instance=ExtResource("6_4vydk")]
 position = Vector2(174, 120)
 
-[node name="Caja5" type="StaticBody2D" parent="." unique_id=1312603312 instance=ExtResource("6_4vydk")]
+[node name="Caja5" parent="." unique_id=1312603312 instance=ExtResource("6_4vydk")]
 position = Vector2(192, 120)
 
-[node name="Caja6" type="StaticBody2D" parent="." unique_id=1068117007 instance=ExtResource("6_4vydk")]
+[node name="Caja6" parent="." unique_id=1068117007 instance=ExtResource("6_4vydk")]
 position = Vector2(210, 120)
 
-[node name="Caja7" type="StaticBody2D" parent="." unique_id=1166850996 instance=ExtResource("6_4vydk")]
+[node name="Caja7" parent="." unique_id=1166850996 instance=ExtResource("6_4vydk")]
 position = Vector2(700, 120)
 
-[node name="Caja8" type="StaticBody2D" parent="." unique_id=1002863034 instance=ExtResource("6_4vydk")]
+[node name="Caja8" parent="." unique_id=1002863034 instance=ExtResource("6_4vydk")]
 position = Vector2(718, 120)
 
-[node name="Caja9" type="StaticBody2D" parent="." unique_id=365913843 instance=ExtResource("6_4vydk")]
+[node name="Caja9" parent="." unique_id=365913843 instance=ExtResource("6_4vydk")]
 position = Vector2(736, 120)
 
-[node name="Caja10" type="StaticBody2D" parent="." unique_id=160307540 instance=ExtResource("6_4vydk")]
+[node name="Caja10" parent="." unique_id=160307540 instance=ExtResource("6_4vydk")]
 position = Vector2(754, 120)
 
-[node name="Caja11" type="StaticBody2D" parent="." unique_id=787740469 instance=ExtResource("6_4vydk")]
+[node name="Caja11" parent="." unique_id=787740469 instance=ExtResource("6_4vydk")]
 position = Vector2(772, 120)
 
-[node name="Caja12" type="StaticBody2D" parent="." unique_id=828847929 instance=ExtResource("6_4vydk")]
+[node name="Caja12" parent="." unique_id=828847929 instance=ExtResource("6_4vydk")]
 position = Vector2(300, 400)
 
-[node name="Caja13" type="StaticBody2D" parent="." unique_id=217041908 instance=ExtResource("6_4vydk")]
+[node name="Caja13" parent="." unique_id=217041908 instance=ExtResource("6_4vydk")]
 position = Vector2(318, 400)
 
-[node name="Caja14" type="StaticBody2D" parent="." unique_id=169414873 instance=ExtResource("6_4vydk")]
+[node name="Caja14" parent="." unique_id=169414873 instance=ExtResource("6_4vydk")]
 position = Vector2(336, 400)
 
-[node name="Caja15" type="StaticBody2D" parent="." unique_id=657536206 instance=ExtResource("6_4vydk")]
+[node name="Caja15" parent="." unique_id=657536206 instance=ExtResource("6_4vydk")]
 position = Vector2(354, 400)
 
-[node name="Caja16" type="StaticBody2D" parent="." unique_id=268827531 instance=ExtResource("6_4vydk")]
+[node name="Caja16" parent="." unique_id=268827531 instance=ExtResource("6_4vydk")]
 position = Vector2(372, 400)
 
-[node name="Caja17" type="StaticBody2D" parent="." unique_id=245528392 instance=ExtResource("6_4vydk")]
+[node name="Caja17" parent="." unique_id=245528392 instance=ExtResource("6_4vydk")]
 position = Vector2(390, 400)
 
-[node name="Caja18" type="StaticBody2D" parent="." unique_id=342132187 instance=ExtResource("6_4vydk")]
+[node name="Caja18" parent="." unique_id=342132187 instance=ExtResource("6_4vydk")]
 position = Vector2(408, 400)
 
-[node name="Caja19" type="StaticBody2D" parent="." unique_id=1619206976 instance=ExtResource("6_4vydk")]
+[node name="Caja19" parent="." unique_id=1619206976 instance=ExtResource("6_4vydk")]
 position = Vector2(820, 300)
 
-[node name="Caja20" type="StaticBody2D" parent="." unique_id=227483731 instance=ExtResource("6_4vydk")]
+[node name="Caja20" parent="." unique_id=227483731 instance=ExtResource("6_4vydk")]
 position = Vector2(820, 318)
 
-[node name="Caja21" type="StaticBody2D" parent="." unique_id=591547109 instance=ExtResource("6_4vydk")]
+[node name="Caja21" parent="." unique_id=591547109 instance=ExtResource("6_4vydk")]
 position = Vector2(820, 336)
 
-[node name="Caja22" type="StaticBody2D" parent="." unique_id=1109019247 instance=ExtResource("6_4vydk")]
+[node name="Caja22" parent="." unique_id=1109019247 instance=ExtResource("6_4vydk")]
 position = Vector2(820, 354)
 
-[node name="Caja23" type="StaticBody2D" parent="." unique_id=1838129327 instance=ExtResource("6_4vydk")]
+[node name="Caja23" parent="." unique_id=1838129327 instance=ExtResource("6_4vydk")]
 position = Vector2(160, 300)
 
-[node name="Caja24" type="StaticBody2D" parent="." unique_id=832093424 instance=ExtResource("6_4vydk")]
+[node name="Caja24" parent="." unique_id=832093424 instance=ExtResource("6_4vydk")]
 position = Vector2(160, 318)
 
-[node name="Caja25" type="StaticBody2D" parent="." unique_id=920789788 instance=ExtResource("6_4vydk")]
+[node name="Caja25" parent="." unique_id=920789788 instance=ExtResource("6_4vydk")]
 position = Vector2(160, 336)
 
-[node name="Caja26" type="StaticBody2D" parent="." unique_id=916847760 instance=ExtResource("6_4vydk")]
+[node name="Caja26" parent="." unique_id=916847760 instance=ExtResource("6_4vydk")]
 position = Vector2(160, 354)
 
-[node name="Caja27" type="StaticBody2D" parent="." unique_id=1297232120 instance=ExtResource("6_4vydk")]
+[node name="Caja27" parent="." unique_id=1297232120 instance=ExtResource("6_4vydk")]
 position = Vector2(560, 200)
 
-[node name="Caja28" type="StaticBody2D" parent="." unique_id=639174786 instance=ExtResource("6_4vydk")]
+[node name="Caja28" parent="." unique_id=639174786 instance=ExtResource("6_4vydk")]
 position = Vector2(560, 218)
 
-[node name="Caja29" type="StaticBody2D" parent="." unique_id=388116792 instance=ExtResource("6_4vydk")]
+[node name="Caja29" parent="." unique_id=388116792 instance=ExtResource("6_4vydk")]
 position = Vector2(560, 236)
 
-[node name="Caja30" type="StaticBody2D" parent="." unique_id=1614777222 instance=ExtResource("6_4vydk")]
+[node name="Caja30" parent="." unique_id=1614777222 instance=ExtResource("6_4vydk")]
 position = Vector2(560, 254)
 
-[node name="Caja31" type="StaticBody2D" parent="." unique_id=1995119450 instance=ExtResource("6_4vydk")]
+[node name="Caja31" parent="." unique_id=1995119450 instance=ExtResource("6_4vydk")]
 position = Vector2(560, 272)
 
-[node name="Moneda1" type="Area2D" parent="." unique_id=2048065985 instance=ExtResource("4_7oex1")]
+[node name="Moneda1" parent="." unique_id=2048065985 instance=ExtResource("4_7oex1")]
 position = Vector2(60, 60)
 
-[node name="Moneda2" type="Area2D" parent="." unique_id=1563388354 instance=ExtResource("4_7oex1")]
+[node name="Moneda2" parent="." unique_id=1563388354 instance=ExtResource("4_7oex1")]
 position = Vector2(900, 80)
 
-[node name="Moneda3" type="Area2D" parent="." unique_id=372870639 instance=ExtResource("4_7oex1")]
+[node name="Moneda3" parent="." unique_id=372870639 instance=ExtResource("4_7oex1")]
 position = Vector2(70, 490)
 
-[node name="Moneda4" type="Area2D" parent="." unique_id=603349306 instance=ExtResource("4_7oex1")]
+[node name="Moneda4" parent="." unique_id=603349306 instance=ExtResource("4_7oex1")]
 position = Vector2(910, 480)
 
-[node name="Moneda5" type="Area2D" parent="." unique_id=1508412016 instance=ExtResource("4_7oex1")]
+[node name="Moneda5" parent="." unique_id=1508412016 instance=ExtResource("4_7oex1")]
 position = Vector2(480, 60)
 
-[node name="Moneda6" type="Area2D" parent="." unique_id=1398941669 instance=ExtResource("4_7oex1")]
+[node name="Moneda6" parent="." unique_id=1398941669 instance=ExtResource("4_7oex1")]
 position = Vector2(480, 490)
 
-[node name="Moneda7" type="Area2D" parent="." unique_id=1179415960 instance=ExtResource("4_7oex1")]
+[node name="Moneda7" parent="." unique_id=1179415960 instance=ExtResource("4_7oex1")]
 position = Vector2(250, 250)
 
-[node name="Moneda8" type="Area2D" parent="." unique_id=9407793 instance=ExtResource("4_7oex1")]
+[node name="Moneda8" parent="." unique_id=9407793 instance=ExtResource("4_7oex1")]
 position = Vector2(760, 420)
 
+[connection signal="timeout" from="Personaje/Timer" to="." method="_on_timer_timeout"]
 [connection signal="recogida" from="Moneda1" to="." method="_on_moneda_recogida"]
 [connection signal="recogida" from="Moneda2" to="." method="_on_moneda_recogida"]
 [connection signal="recogida" from="Moneda3" to="." method="_on_moneda_recogida"]
