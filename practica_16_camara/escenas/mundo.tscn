@@ -33,6 +33,7 @@ drag_vertical_enabled = true
 
 [node name="Timer" type="Timer" parent="Personaje" unique_id=704520437]
 wait_time = 0.1
+autostart = true
 
 [node name="Interfaz" type="CanvasLayer" parent="." unique_id=749434465]
 
