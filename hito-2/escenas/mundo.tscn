@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dfuut8afa46h5" path="res://assets/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skull/v2/skull_v2_3.png" id="5_txhqv"]
 [ext_resource type="Texture2D" uid="uid://cfw41nwkuc118" path="res://assets/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skull/v2/skull_v2_4.png" id="6_mb57o"]
 [ext_resource type="Texture2D" uid="uid://dhxfpd83m50fi" path="res://assets/81r4qgm0s8k61.png" id="7_4vydk"]
+[ext_resource type="AudioStream" uid="uid://bcsxrpbahoo0x" path="res://assets/raaaah-skeleton.mp3" id="11_jcqeh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6wjgb"]
 texture = ExtResource("1_cdbbl")
@@ -170,6 +171,11 @@ autoplay = "Idle"
 
 [node name="Colision" type="CollisionShape2D" parent="CuerpoEnemigo/Enemigo" unique_id=1536409647]
 shape = SubResource("CircleShape2D_cui2h")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CuerpoEnemigo" unique_id=914293256]
+stream = ExtResource("11_jcqeh")
+autoplay = true
+parameters/looping = true
 
 [node name="Timer" type="Timer" parent="." unique_id=176010935]
 wait_time = 1.5
