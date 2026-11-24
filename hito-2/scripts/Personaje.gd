@@ -16,7 +16,7 @@ func _physics_process(_delta: float) -> void:
 	
 # sirve para iniciar el array con los corazones
 func _ready() -> void:
-	var padre_corazones = $"Barra de vida/HBoxContainer"
+	var padre_corazones = $HBoxContainer
 	for child in padre_corazones.get_children():
 		lista_Corazones.append(child)
 

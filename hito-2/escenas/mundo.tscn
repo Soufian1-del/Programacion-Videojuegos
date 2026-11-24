@@ -122,36 +122,34 @@ tile_set = SubResource("TileSet_cui2h")
 [node name="Personaje" parent="." unique_id=257940856 instance=ExtResource("2_6wjgb")]
 position = Vector2(154, 135)
 
-[node name="Barra de vida" type="CanvasLayer" parent="Personaje" unique_id=993245119]
-offset = Vector2(100, 93)
-transform = Transform2D(1, 0, 0, 1, 100, 93)
+[node name="HBoxContainer" type="HBoxContainer" parent="Personaje" unique_id=233719522]
+offset_left = -7.0
+offset_top = -15.0
+offset_right = 151.0
+offset_bottom = 25.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Personaje/Barra de vida" unique_id=233719522]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Corazon3" type="TextureRect" parent="Personaje/Barra de vida/HBoxContainer" unique_id=1384731812]
-custom_minimum_size = Vector2(50, 0)
+[node name="Corazon3" type="TextureRect" parent="Personaje/HBoxContainer" unique_id=1384731812]
+custom_minimum_size = Vector2(1.5, 0)
 layout_mode = 2
 
-[node name="Imagen" type="Sprite2D" parent="Personaje/Barra de vida/HBoxContainer/Corazon3" unique_id=1423488883]
-scale = Vector2(0.1, 0.1)
+[node name="Imagen" type="Sprite2D" parent="Personaje/HBoxContainer/Corazon3" unique_id=1423488883]
+scale = Vector2(0.01, 0.01)
 texture = ExtResource("7_4vydk")
 
-[node name="Corazon2" type="TextureRect" parent="Personaje/Barra de vida/HBoxContainer" unique_id=2035451902]
-custom_minimum_size = Vector2(50, 0)
+[node name="Corazon2" type="TextureRect" parent="Personaje/HBoxContainer" unique_id=2035451902]
+custom_minimum_size = Vector2(1.5, 0)
 layout_mode = 2
 
-[node name="Imagen" type="Sprite2D" parent="Personaje/Barra de vida/HBoxContainer/Corazon2" unique_id=1910567134]
-scale = Vector2(0.1, 0.1)
+[node name="Imagen" type="Sprite2D" parent="Personaje/HBoxContainer/Corazon2" unique_id=1910567134]
+scale = Vector2(0.01, 0.01)
 texture = ExtResource("7_4vydk")
 
-[node name="Corazon" type="TextureRect" parent="Personaje/Barra de vida/HBoxContainer" unique_id=809508176]
+[node name="Corazon" type="TextureRect" parent="Personaje/HBoxContainer" unique_id=809508176]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 
-[node name="Imagen" type="Sprite2D" parent="Personaje/Barra de vida/HBoxContainer/Corazon" unique_id=1668856572]
-scale = Vector2(0.1, 0.1)
+[node name="Imagen" type="Sprite2D" parent="Personaje/HBoxContainer/Corazon" unique_id=1668856572]
+scale = Vector2(0.01, 0.01)
 texture = ExtResource("7_4vydk")
 
 [node name="Enemigo" type="Area2D" parent="." unique_id=289197227]
