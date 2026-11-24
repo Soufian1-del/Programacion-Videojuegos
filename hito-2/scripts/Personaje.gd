@@ -42,6 +42,7 @@ func recibir_danio():
 		actualizar_vida()
 	if vida <= 0:
 		queue_free()
+		get_tree().change_scene_to_file("res://escenas/menu.tscn")
 		
 # sirve para cambiar el array y hacer que se le quiten corazones
 func actualizar_vida():
