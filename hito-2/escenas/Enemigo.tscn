@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://n5qufneirru4"]
+
+[ext_resource type="Script" uid="uid://bfsh1xgxuwpf3" path="res://scripts/cuerpo_personaje.gd" id="1_g7x46"]
+[ext_resource type="Script" uid="uid://bqiu3tv32uh5b" path="res://scripts/enemigo.gd" id="2_dxnq1"]
+[ext_resource type="Texture2D" uid="uid://0y86hf7r8sug" path="res://assets/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skull/v2/skull_v2_1.png" id="3_chp7c"]
+[ext_resource type="Texture2D" uid="uid://djs44731raupl" path="res://assets/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skull/v2/skull_v2_2.png" id="4_nkg5f"]
+[ext_resource type="Texture2D" uid="uid://dfuut8afa46h5" path="res://assets/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skull/v2/skull_v2_3.png" id="5_p4thj"]
+[ext_resource type="Texture2D" uid="uid://cfw41nwkuc118" path="res://assets/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skull/v2/skull_v2_4.png" id="6_bbelo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jh10v"]
+atlas = ExtResource("3_chp7c")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dkg40"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jh10v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nkg5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_p4thj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bbelo")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cui2h"]
+radius = 5.0
+
+[node name="CuerpoEnemigo" type="CharacterBody2D" unique_id=166388355 node_paths=PackedStringArray("objetivo")]
+script = ExtResource("1_g7x46")
+objetivo = NodePath("")
+
+[node name="Enemigo" type="Area2D" parent="." unique_id=1289071263]
+script = ExtResource("2_dxnq1")
+
+[node name="Animacion" type="AnimatedSprite2D" parent="Enemigo" unique_id=225152676]
+sprite_frames = SubResource("SpriteFrames_dkg40")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Colision" type="CollisionShape2D" parent="Enemigo" unique_id=1389184163]
+shape = SubResource("CircleShape2D_cui2h")
+
+[connection signal="body_entered" from="Enemigo" to="Enemigo" method="_on_body_entered"]
